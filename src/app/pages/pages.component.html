@@ -8,8 +8,12 @@
       </h2>
     </mat-toolbar>
     <mat-selection-list #shoes [multiple]="false">
-      <mat-list-option class="option" *ngFor="let m of menu">
-        <a [routerLink]="m.route"> {{ m.menu }} </a>
+      <mat-list-option
+        class="option"
+        *ngFor="let m of menu"
+        [routerLink]="m.route"
+      >
+        <a> {{ m.menu }} </a>
       </mat-list-option>
     </mat-selection-list>
   </mat-sidenav>
