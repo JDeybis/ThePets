@@ -16,3 +16,11 @@ td {
 .example-spacer {
   flex: 1 1 auto;
 }
+
+.detail {
+  cursor: pointer;
+}
+
+.detail:hover {
+  text-decoration: underline;
+}

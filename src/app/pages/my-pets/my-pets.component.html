@@ -1,8 +1,11 @@
+<h1 *ngIf="favorites.length === 0">No hay mascotas registradas.</h1>
 <mat-grid-list cols="3">
   <mat-grid-tile *ngFor="let fav of favorites">
     <mat-card class="example-card">
       <mat-card-header>
-        <mat-card-title>{{ fav.pet.name }} </mat-card-title>
+        <mat-card-title class="detail" (click)="showDetail(fav.pet)"
+          >{{ fav.pet.name }}
+        </mat-card-title>
         <span class="example-spacer"></span>
         <button
           mat-icon-button

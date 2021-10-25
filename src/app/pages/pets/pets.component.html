@@ -1,5 +1,7 @@
 <mat-grid-list cols="12">
-  <mat-grid-tile colspan="10"></mat-grid-tile>
+  <mat-grid-tile colspan="10">
+    <h1 *ngIf="pets.length === 0">No hay mascotas creadas.</h1>
+  </mat-grid-tile>
   <mat-grid-tile colspan="2">
     <a
       mat-raised-button

@@ -21,8 +21,8 @@
       </mat-form-field>
     </mat-grid-tile>
     <mat-grid-tile colspan="6">
-      <mat-form-field appearance="fill">
-        <mat-label>Favorite food</mat-label>
+      <mat-form-field class="example-form-field" appearance="fill">
+        <mat-label>Tipo mascota</mat-label>
         <mat-select formControlName="pet_type">
           <mat-option *ngFor="let types of petTypes" [value]="types._id">{{
             types.type
