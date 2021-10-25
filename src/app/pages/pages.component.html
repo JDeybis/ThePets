@@ -1,0 +1,33 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #drawer opened mode="side">
+    <mat-toolbar style="color: white; background-color: #3f51b5">
+      <mat-icon style="height: 100%; font-size: 50px"> pets </mat-icon>
+      <span class="example-spacer"></span>
+      <h2>
+        <strong style="font-size: 50px">PETS</strong>
+      </h2>
+    </mat-toolbar>
+    <mat-selection-list #shoes [multiple]="false">
+      <mat-list-option class="option" *ngFor="let m of menu">
+        <a [routerLink]="m.route"> {{ m.menu }} </a>
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+        (click)="drawer.toggle()"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="example-spacer"></span>
+      <button mat-button (click)="logout()">Cerrar Sesion</button>
+    </mat-toolbar>
+    <div class="container" style="background-color: whitesmoke">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

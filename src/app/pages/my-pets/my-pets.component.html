@@ -1,0 +1,30 @@
+<mat-grid-list cols="3">
+  <mat-grid-tile *ngFor="let fav of favorites">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>{{ fav.pet.name }} </mat-card-title>
+        <span class="example-spacer"></span>
+        <button
+          mat-icon-button
+          class="example-icon favorite-icon"
+          *ngIf="fav.favorite"
+          (click)="deleteFavoritePets(fav.pet._id!)"
+        >
+          <mat-icon style="color: red">favorite</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          class="example-icon favorite-icon"
+          *ngIf="!fav.favorite"
+          (click)="addFavoritePets(fav.pet._id!)"
+        >
+          <mat-icon>favorite_outline</mat-icon>
+        </button>
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="{{ fav.pet.image_url }}"
+        alt="Photo of a Shiba Inu"
+      /> </mat-card
+  ></mat-grid-tile>
+</mat-grid-list>
